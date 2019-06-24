@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <data>
+        <variable
+                name="Movieintheater"
+                type="com.pankaj.movieapp.data.model.MovieInTheatres"/>
+
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp"
+            android:layout_margin="4dp">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+
+        >
+
+
+            <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="100dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    tools:srcCompat="@tools:sample/avatars"
+                    app:imageurl="@{Movieintheater.posterUrl}"
+                    android:scaleType="fitXY"
+
+            />
+
+            <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{Movieintheater.title}"
+                    tools:text="fdgdfgdgdfgdfgdfgfdgdf"
+                    android:gravity="center"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_toRightOf="@+id/image"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+
+            />
+            <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{Movieintheater.averageRating}"
+                    tools:text="fdgdfgdgdfgdfgdfgfdgdf"
+                    android:gravity="center"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_toRightOf="@+id/image"
+                    android:layout_below="@+id/title"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+
+            />
+
+            <TextView
+                    android:id="@+id/yearrelease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{Movieintheater.averageRating}"
+                    tools:text="fdgdfgdgdfgdfgdfgfdgdf"
+                    android:gravity="center"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_toRightOf="@+id/image"
+                    android:layout_below="@+id/rating"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+
+            />
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>
